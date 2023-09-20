@@ -1,0 +1,19 @@
+Explique por que, neste caso supracitado, podemos apenas utilizar o mesclar e não o atribuir.
+
+Tanto a operação "Mesclar" quanto a operação "Atribuir" são usadas para criar relacionamentos entre tabelas, mas elas têm finalidades diferentes:
+
+Mesclar (Join):
+
+O "Mesclar" é usado para combinar dados de duas ou mais tabelas com base em uma coluna comum, criando assim uma nova tabela que inclui informações de ambas as tabelas.
+É ideal para criar tabelas que representam relações de um-para-muitos ou muitos-para-um, como associar colaboradores a departamentos, onde vários colaboradores podem pertencer a um departamento.
+A operação "Mesclar" resulta em uma nova tabela que pode ser usada diretamente em relatórios e visualizações.
+Atribuir (Assign):
+
+O "Atribuir" é usado para criar colunas calculadas em uma tabela existente, com base em valores de outras tabelas.
+É útil quando você deseja agregar informações de outras tabelas em uma tabela existente sem criar uma nova tabela. Isso pode ser útil para adicionar informações de resumo a uma tabela de fatos em um modelo estrela, por exemplo.
+A operação "Atribuir" não cria uma nova tabela; ela apenas calcula valores em colunas existentes com base em fórmulas.
+No caso supracitado de associar colaboradores a departamentos, a operação apropriada é a "Mesclar" porque você deseja criar uma nova tabela que inclui informações de ambas as tabelas, ou seja, você quer que cada registro na tabela de colaboradores tenha uma referência ao departamento ao qual pertence.
+
+A operação "Atribuir" não seria adequada neste caso, pois ela não criaria uma nova tabela de colaboradores com informações de departamentos. Em vez disso, ela apenas permitiria a criação de colunas calculadas em uma tabela existente, o que não atenderia ao requisito de vincular colaboradores a departamentos de forma eficaz.
+
+Portanto, ao criar relacionamentos entre colaboradores e departamentos, o uso da operação "Mesclar" é a abordagem correta e mais apropriada.
